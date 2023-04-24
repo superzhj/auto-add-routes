@@ -4,7 +4,7 @@ bit=`uname -m`
 if [[ $bit = aarch64 ]]; then
 ./
 elif [[ $bit = x86_64 ]]; then
-./
+./install.sh
 else
 red "目前脚本不支持$bit架构" && exit
 fi
