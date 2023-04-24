@@ -2,7 +2,8 @@
 [[ $EUID -ne 0 ]] && yellow "请以root模式运行脚本" && exit
 bit=`uname -m`
 if [[ $bit = aarch64 ]]; then
-echo y
+wget -N https://raw.githubusercontent.com/yonggekkk/auto-add-routes/master/install.sh && chmod +x install.sh
+./install.sh
 elif [[ $bit = x86_64 ]]; then
 wget -N https://raw.githubusercontent.com/yonggekkk/auto-add-routes/master/install.sh && chmod +x install.sh
 ./install.sh
